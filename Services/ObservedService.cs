@@ -13,6 +13,7 @@ namespace StockAPI.Services
         int CreateObserved(CreateObservedDto dto);
         ObservedDto GetById(int id);
         bool DeleteById(int id);
+        bool Update(UpdateObservedDto dto, int id);
     }
 
     public class ObservedService : IObservedService
@@ -63,6 +64,18 @@ namespace StockAPI.Services
             return true;
         }
 
+        public bool Update(UpdateObservedDto dto, int id)
+        {
+            var observed = _dbContext.Observed.FirstOrDefault(s => s.Id == id);
+            if (observed is null)
+                return false;
 
+            observed.NumberOfActions = dto.NumberOfActions;
+            observed.PurchasePrice = dto.PurchasePrice;
+
+            _dbContext.SaveChanges();
+
+            return true;
+        }
     }
 }

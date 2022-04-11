@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "DUS+498t9k5THMBRAiC3ZO1DTdnvwCg1UsjaI9Do1JCvOxbRnRBgBcoU1pg52untvomy32P3q5QlKqdBJh6UbA==",
+  "dgSpecHash": "hXhLawdheS5KYRAIpEaZsNInzDAncmLOSTO8/mML7i9aB2X6Jn0eHNbTpKHC16ff48vetj1SfvGvtcU/0MYxCg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Adrian\\Desktop\\dev\\c#\\StockAPI\\StockAPI.csproj",
   "expectedPackageFiles": [
@@ -44,6 +44,9 @@
     "C:\\Users\\Adrian\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\Adrian\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
     "C:\\Users\\Adrian\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\Adrian\\.nuget\\packages\\nlog\\4.7.11\\nlog.4.7.11.nupkg.sha512",
+    "C:\\Users\\Adrian\\.nuget\\packages\\nlog.extensions.logging\\1.7.4\\nlog.extensions.logging.1.7.4.nupkg.sha512",
+    "C:\\Users\\Adrian\\.nuget\\packages\\nlog.web.aspnetcore\\4.14.0\\nlog.web.aspnetcore.4.14.0.nupkg.sha512",
     "C:\\Users\\Adrian\\.nuget\\packages\\runtime.native.system\\4.3.0\\runtime.native.system.4.3.0.nupkg.sha512",
     "C:\\Users\\Adrian\\.nuget\\packages\\system.collections\\4.3.0\\system.collections.4.3.0.nupkg.sha512",
     "C:\\Users\\Adrian\\.nuget\\packages\\system.collections.concurrent\\4.3.0\\system.collections.concurrent.4.3.0.nupkg.sha512",

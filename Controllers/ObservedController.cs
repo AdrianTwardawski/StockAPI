@@ -59,5 +59,23 @@ namespace StockAPI.Controllers
             return NotFound();
         }
 
+        [HttpPut("{id}")]
+        public ActionResult Update([FromBody]UpdateObservedDto dto, [FromRoute] int id)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            var isUpdated = _service.Update(dto, id);
+            
+            if(!isUpdated)
+            {
+                return NotFound();
+            }
+
+            return Ok();
+        }
+
     }
 }
