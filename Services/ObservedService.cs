@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Microsoft.Extensions.Logging;
 using StockAPI.Entities;
 using StockAPI.Models;
 using System;
@@ -20,10 +21,12 @@ namespace StockAPI.Services
     {
         private readonly ApplicationDbContext _dbContext;
         private readonly IMapper _mapper;
-        public ObservedService(ApplicationDbContext dbContext, IMapper mapper)
+        private readonly ILogger<ObservedService> _logger;
+        public ObservedService(ApplicationDbContext dbContext, IMapper mapper, ILogger<ObservedService> logger)
         {
             _dbContext = dbContext;
             _mapper = mapper;
+            _logger = logger;
         }
 
 
@@ -55,6 +58,8 @@ namespace StockAPI.Services
 
         public bool DeleteById(int id)
         {
+            _logger.LogError($"Stock with id: {id} DELETE action invoked");
+
             var observed = _dbContext.Observed.FirstOrDefault(s => s.Id == id);
             if (observed is null) return false;
 

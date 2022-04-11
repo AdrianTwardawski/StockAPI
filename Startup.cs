@@ -8,6 +8,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using StockAPI.Controllers;
 using StockAPI.Entities;
+using StockAPI.Middleware;
 using StockAPI.Services;
 using System;
 using System.Collections.Generic;
@@ -34,6 +35,7 @@ namespace StockAPI
             services.AddControllers();
             services.AddDbContext<ApplicationDbContext>();
             services.AddScoped<MarketSeeder>();
+            services.AddScoped<ErrorHandlingMiddleware>();
             services.AddCors(options =>
             {
                 options.AddPolicy("FrontEndClient", builder =>
@@ -55,6 +57,7 @@ namespace StockAPI
             {
                 app.UseDeveloperExceptionPage();
             }
+            app.UseMiddleware<ErrorHandlingMiddleware>();
             
             app.UseHttpsRedirection();
 
