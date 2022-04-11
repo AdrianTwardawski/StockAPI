@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using Microsoft.Extensions.Logging;
 using StockAPI.Entities;
+using StockAPI.Exceptions;
 using StockAPI.Models;
 using System;
 using System.Collections.Generic;
@@ -13,8 +14,8 @@ namespace StockAPI.Services
     {
         int CreateObserved(CreateObservedDto dto);
         ObservedDto GetById(int id);
-        bool DeleteById(int id);
-        bool Update(UpdateObservedDto dto, int id);
+        void DeleteById(int id);
+        void Update(UpdateObservedDto dto, int id);
     }
 
     public class ObservedService : IObservedService
@@ -33,16 +34,16 @@ namespace StockAPI.Services
         public int CreateObserved(CreateObservedDto dto)
         {
             var marketItem = _dbContext.Market.FirstOrDefault(i => i.Name == dto.Name);
+            if (marketItem is null)
+                throw new NotFoundException($"Stock {dto.Name} not found");
 
             var observed = _mapper.Map<Observed>(dto);
 
-            if (marketItem != null)
-            {
-                observed.MarketId = marketItem.Id;
-                observed.Profit = (observed.PurchasePrice - marketItem.Price) * observed.NumberOfActions;
-                _dbContext.Observed.Add(observed);
-                _dbContext.SaveChanges();
-            }
+            observed.MarketId = marketItem.Id;
+            observed.Profit = (observed.PurchasePrice - marketItem.Price) * observed.NumberOfActions;
+
+            _dbContext.Observed.Add(observed);
+            _dbContext.SaveChanges();
 
             return observed.Id;
         }
@@ -51,36 +52,35 @@ namespace StockAPI.Services
         public ObservedDto GetById(int id)
         {
            var observed = _dbContext.Observed.FirstOrDefault(s => s.Id == id);
+           if (observed is null)
+               throw new NotFoundException("Stock not found");
 
             var result = _mapper.Map<ObservedDto>(observed);
             return result;
         }
 
-        public bool DeleteById(int id)
+        public void DeleteById(int id)
         {
             _logger.LogError($"Stock with id: {id} DELETE action invoked");
 
             var observed = _dbContext.Observed.FirstOrDefault(s => s.Id == id);
-            if (observed is null) return false;
+            if (observed is null)
+                throw new NotFoundException("Stock not found");
 
             _dbContext.Observed.Remove(observed);
-            _dbContext.SaveChanges();
-
-            return true;
+            _dbContext.SaveChanges();         
         }
 
-        public bool Update(UpdateObservedDto dto, int id)
+        public void Update(UpdateObservedDto dto, int id)
         {
             var observed = _dbContext.Observed.FirstOrDefault(s => s.Id == id);
             if (observed is null)
-                return false;
+                throw new NotFoundException("Stock not found");
 
             observed.NumberOfActions = dto.NumberOfActions;
             observed.PurchasePrice = dto.PurchasePrice;
 
-            _dbContext.SaveChanges();
-
-            return true;
+            _dbContext.SaveChanges();         
         }
     }
 }

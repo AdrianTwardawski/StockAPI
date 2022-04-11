@@ -10,70 +10,42 @@ using System.Threading.Tasks;
 
 namespace StockAPI.Controllers
 {
+    [ApiController]
     [Route("[controller]")]
     public class ObservedController : ControllerBase
     {
         private readonly IObservedService _service;
 
-        public ObservedController(IMapper mapper, IObservedService service)
+        public ObservedController(IObservedService service)
         {
             _service = service;
         }
 
-
         [HttpPost]
         public ActionResult CreateObserved([FromBody] CreateObservedDto dto)
         {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
-
             var id = _service.CreateObserved(dto);
-
-            if (id == 0)
-            {
-                return NotFound($"Stock {dto.Name} doesn't exists");
-            }
-
             return Created($"/api/observed/{id}", null);
         }
 
         [HttpGet("{id}")]
-        public ActionResult GetObserved([FromRoute]int id)
+        public ActionResult GetObserved([FromRoute] int id)
         {
             var observed = _service.GetById(id);
             return Ok(observed);
-
         }
 
         [HttpDelete("{id}")]
-        public ActionResult Delete([FromRoute]int id)
+        public ActionResult Delete([FromRoute] int id)
         {
-            var isDeleted = _service.DeleteById(id);
-
-            if(isDeleted)
-            {
-                return NoContent();
-            }
-            return NotFound();
+            _service.DeleteById(id);
+            return NoContent();
         }
 
         [HttpPut("{id}")]
-        public ActionResult Update([FromBody]UpdateObservedDto dto, [FromRoute] int id)
+        public ActionResult Update([FromBody] UpdateObservedDto dto, [FromRoute] int id)
         {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
-
-            var isUpdated = _service.Update(dto, id);
-            
-            if(!isUpdated)
-            {
-                return NotFound();
-            }
-
+            _service.Update(dto, id);
             return Ok();
         }
 

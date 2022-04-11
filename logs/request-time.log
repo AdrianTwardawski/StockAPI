@@ -243,3 +243,13 @@ Error Number:4060,State:1,Class:11
 2022-04-11 21:55:16.9999||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
 2022-04-11 21:55:16.9999||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
 2022-04-11 21:55:17.0168||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Adrian\Desktop\dev\c#\StockAPI 
+2022-04-11 22:20:50.3725||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001 
+2022-04-11 22:20:50.4421||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000 
+2022-04-11 22:20:50.4575||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-04-11 22:20:50.4575||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-04-11 22:20:50.4678||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Adrian\Desktop\dev\c#\StockAPI 
+2022-04-11 22:30:27.8128||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001 
+2022-04-11 22:30:28.0733||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000 
+2022-04-11 22:30:28.1310||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-04-11 22:30:28.1964||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-04-11 22:30:28.1964||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Adrian\Desktop\dev\c#\StockAPI 
