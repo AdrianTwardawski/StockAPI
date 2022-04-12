@@ -70,3 +70,8 @@ C:\Users\Adrian\Desktop\dev\c#\StockAPI\bin\Debug\net5.0\NLog.dll
 C:\Users\Adrian\Desktop\dev\c#\StockAPI\bin\Debug\net5.0\NLog.Extensions.Logging.dll
 C:\Users\Adrian\Desktop\dev\c#\StockAPI\bin\Debug\net5.0\NLog.Web.AspNetCore.dll
 C:\Users\Adrian\Desktop\dev\c#\StockAPI\bin\Debug\net5.0\nlog.config
+C:\Users\Adrian\Desktop\dev\c#\StockAPI\bin\Debug\net5.0\Microsoft.OpenApi.dll
+C:\Users\Adrian\Desktop\dev\c#\StockAPI\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\Adrian\Desktop\dev\c#\StockAPI\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\Adrian\Desktop\dev\c#\StockAPI\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\Adrian\Desktop\dev\c#\StockAPI\obj\Debug\net5.0\StockAPI.MvcApplicationPartsAssemblyInfo.cs

@@ -36,6 +36,8 @@ namespace StockAPI
             services.AddDbContext<ApplicationDbContext>();
             services.AddScoped<MarketSeeder>();
             services.AddScoped<ErrorHandlingMiddleware>();
+            services.AddScoped<RequestTimeMiddleware>();
+            services.AddSwaggerGen();
             services.AddCors(options =>
             {
                 options.AddPolicy("FrontEndClient", builder =>
@@ -57,9 +59,18 @@ namespace StockAPI
             {
                 app.UseDeveloperExceptionPage();
             }
+
             app.UseMiddleware<ErrorHandlingMiddleware>();
+            app.UseMiddleware<RequestTimeMiddleware>();
             
             app.UseHttpsRedirection();
+
+            app.UseSwagger();
+
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Stock API");
+            });
 
             app.UseRouting();
             app.UseEndpoints(endpoints =>
