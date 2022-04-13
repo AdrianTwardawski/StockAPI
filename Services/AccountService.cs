@@ -29,6 +29,7 @@ namespace StockAPI.Services
         {
             _dbContext = dbContext;
             _passwordHasher = passwordHasher;
+            _authenticationSettings = authenticationSettings;
         }
 
         public void RegisterUser(RegisterUserDto dto)

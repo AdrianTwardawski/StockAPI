@@ -1,0 +1,92 @@
+2022-04-13 22:37:53.3368||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001 
+2022-04-13 22:37:53.4980||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000 
+2022-04-13 22:37:53.5419||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-04-13 22:37:53.5465||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-04-13 22:37:53.5465||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Adrian\Desktop\dev\c#\StockAPI 
+2022-04-13 22:42:39.1485||ERROR|StockAPI.Middleware.ErrorHandlingMiddleware|Nullable object must have a value. System.InvalidOperationException: Nullable object must have a value.
+   at System.Nullable`1.get_Value()
+   at StockAPI.Services.AccountService.GenerateJwt(LoginDto dto) in C:\Users\Adrian\Desktop\dev\c#\StockAPI\Services\AccountService.cs:line 68
+   at StockAPI.Controllers.AccountController.Login(LoginDto dto) in C:\Users\Adrian\Desktop\dev\c#\StockAPI\Controllers\AccountController.cs:line 30
+   at lambda_method104(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at StockAPI.Middleware.RequestTimeMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\Adrian\Desktop\dev\c#\StockAPI\Middleware\RequestTimeMiddleware.cs:line 24
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at StockAPI.Middleware.ErrorHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\Adrian\Desktop\dev\c#\StockAPI\Middleware\ErrorHandlingMiddleware.cs:line 23
+2022-04-13 22:45:22.4230||ERROR|StockAPI.Middleware.ErrorHandlingMiddleware|Nullable object must have a value. System.InvalidOperationException: Nullable object must have a value.
+   at System.Nullable`1.get_Value()
+   at StockAPI.Services.AccountService.GenerateJwt(LoginDto dto) in C:\Users\Adrian\Desktop\dev\c#\StockAPI\Services\AccountService.cs:line 68
+   at StockAPI.Controllers.AccountController.Login(LoginDto dto) in C:\Users\Adrian\Desktop\dev\c#\StockAPI\Controllers\AccountController.cs:line 30
+   at lambda_method104(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at StockAPI.Middleware.RequestTimeMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\Adrian\Desktop\dev\c#\StockAPI\Middleware\RequestTimeMiddleware.cs:line 24
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at StockAPI.Middleware.ErrorHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\Adrian\Desktop\dev\c#\StockAPI\Middleware\ErrorHandlingMiddleware.cs:line 23
+2022-04-13 22:47:29.5485||ERROR|StockAPI.Middleware.ErrorHandlingMiddleware|Object reference not set to an instance of an object. System.NullReferenceException: Object reference not set to an instance of an object.
+   at StockAPI.Services.AccountService.GenerateJwt(LoginDto dto) in C:\Users\Adrian\Desktop\dev\c#\StockAPI\Services\AccountService.cs:line 77
+   at StockAPI.Controllers.AccountController.Login(LoginDto dto) in C:\Users\Adrian\Desktop\dev\c#\StockAPI\Controllers\AccountController.cs:line 30
+   at lambda_method104(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at StockAPI.Middleware.RequestTimeMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\Adrian\Desktop\dev\c#\StockAPI\Middleware\RequestTimeMiddleware.cs:line 24
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at StockAPI.Middleware.ErrorHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\Adrian\Desktop\dev\c#\StockAPI\Middleware\ErrorHandlingMiddleware.cs:line 23
+2022-04-13 22:50:30.6042||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001 
+2022-04-13 22:50:30.6897||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000 
+2022-04-13 22:50:30.7053||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-04-13 22:50:30.7053||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-04-13 22:50:30.7658||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Adrian\Desktop\dev\c#\StockAPI 
+2022-04-13 22:52:43.5484||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001 
+2022-04-13 22:52:43.6692||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000 
+2022-04-13 22:52:43.7721||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-04-13 22:52:43.8232||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-04-13 22:52:43.8697||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Adrian\Desktop\dev\c#\StockAPI 
+2022-04-13 22:53:17.1960||INFO|StockAPI.Middleware.RequestTimeMiddleware|Request [POST] at /api/account/login took 12369 ms 
+2022-04-13 22:54:21.7610||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001 
+2022-04-13 22:54:21.8352||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000 
+2022-04-13 22:54:21.8497||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-04-13 22:54:21.8795||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-04-13 22:54:21.9026||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Adrian\Desktop\dev\c#\StockAPI 

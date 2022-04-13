@@ -78,3 +78,4 @@ C:\Users\Adrian\Desktop\dev\c#\StockAPI\obj\Debug\net5.0\StockAPI.MvcApplication
 C:\Users\Adrian\Desktop\dev\c#\StockAPI\bin\Debug\net5.0\FluentValidation.dll
 C:\Users\Adrian\Desktop\dev\c#\StockAPI\bin\Debug\net5.0\FluentValidation.AspNetCore.dll
 C:\Users\Adrian\Desktop\dev\c#\StockAPI\bin\Debug\net5.0\FluentValidation.DependencyInjectionExtensions.dll
+C:\Users\Adrian\Desktop\dev\c#\StockAPI\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
