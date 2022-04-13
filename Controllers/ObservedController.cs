@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 namespace StockAPI.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("api/market/observed")]
     public class ObservedController : ControllerBase
     {
         private readonly IObservedService _service;
@@ -21,12 +21,21 @@ namespace StockAPI.Controllers
             _service = service;
         }
 
+
         [HttpPost]
         public ActionResult CreateObserved([FromBody] CreateObservedDto dto)
         {
             var id = _service.CreateObserved(dto);
             return Created($"/api/observed/{id}", null);
         }
+
+        [HttpGet]
+        public ActionResult GetObserved()
+        {
+            var observed = _service.GetAll();
+            return Ok(observed);
+        }
+
 
         [HttpGet("{id}")]
         public ActionResult GetObserved([FromRoute] int id)

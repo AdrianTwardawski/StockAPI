@@ -15,7 +15,7 @@ namespace StockAPI
             CreateMap<Market, MarketDto>();
             CreateMap<Observed, ObservedDto>()
                 .ForMember(m => m.CurrentPrice, c => c.MapFrom(s => s.Market.Price));
-            CreateMap<CreateObservedDto, Observed>();          
+            CreateMap<CreateObservedDto, Observed>();
         }
 
         

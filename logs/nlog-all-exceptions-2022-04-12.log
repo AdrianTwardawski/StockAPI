@@ -1,29 +1,3 @@
-2022-04-12 10:18:22.2102||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001 
-2022-04-12 10:18:22.3086||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000 
-2022-04-12 10:18:22.3276||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
-2022-04-12 10:18:22.3696||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
-2022-04-12 10:18:22.3771||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Adrian\Desktop\dev\c#\StockAPI 
-2022-04-12 10:19:39.7121||INFO|StockAPI.Middleware.RequestTimeMiddleware|Request [GET] at /observed/14 took 27933 ms 
-2022-04-12 10:34:03.9848||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001 
-2022-04-12 10:34:04.0544||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000 
-2022-04-12 10:34:04.0690||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
-2022-04-12 10:34:04.0690||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
-2022-04-12 10:34:04.0915||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Adrian\Desktop\dev\c#\StockAPI 
-2022-04-12 11:45:49.4364||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001 
-2022-04-12 11:45:49.5007||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000 
-2022-04-12 11:45:49.5609||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
-2022-04-12 11:45:49.5784||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
-2022-04-12 11:45:49.5784||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Adrian\Desktop\dev\c#\StockAPI 
-2022-04-12 11:50:39.1907||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001 
-2022-04-12 11:50:39.2558||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000 
-2022-04-12 11:50:39.2558||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
-2022-04-12 11:50:39.2707||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
-2022-04-12 11:50:39.2707||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Adrian\Desktop\dev\c#\StockAPI 
-2022-04-12 11:54:23.5182||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001 
-2022-04-12 11:54:23.5689||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000 
-2022-04-12 11:54:23.5689||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
-2022-04-12 11:54:23.5834||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
-2022-04-12 11:54:23.5937||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Adrian\Desktop\dev\c#\StockAPI 
 2022-04-12 11:56:24.3607||ERROR|StockAPI.Middleware.ErrorHandlingMiddleware|An error occurred while updating the entries. See the inner exception for details. Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details.
  ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK_Observed_Market_MarketId". The conflict occurred in database "StockAPI", table "dbo.Market", column 'Id'.
 The statement has been terminated.
@@ -75,11 +49,6 @@ Error Number:547,State:0,Class:16
    at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
 --- End of stack trace from previous location ---
    at StockAPI.Middleware.ErrorHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\Adrian\Desktop\dev\c#\StockAPI\Middleware\ErrorHandlingMiddleware.cs:line 23
-2022-04-12 11:57:33.1525||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001 
-2022-04-12 11:57:33.2307||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000 
-2022-04-12 11:57:33.2378||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
-2022-04-12 11:57:33.2501||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
-2022-04-12 11:57:33.2501||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Adrian\Desktop\dev\c#\StockAPI 
 2022-04-12 11:57:55.5317||ERROR|StockAPI.Middleware.ErrorHandlingMiddleware|An error occurred while updating the entries. See the inner exception for details. Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details.
  ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK_Observed_Market_MarketId". The conflict occurred in database "StockAPI", table "dbo.Market", column 'Id'.
 The statement has been terminated.
@@ -131,46 +100,6 @@ Error Number:547,State:0,Class:16
    at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
 --- End of stack trace from previous location ---
    at StockAPI.Middleware.ErrorHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\Adrian\Desktop\dev\c#\StockAPI\Middleware\ErrorHandlingMiddleware.cs:line 23
-2022-04-12 11:59:43.2012||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001 
-2022-04-12 11:59:43.3037||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000 
-2022-04-12 11:59:43.3037||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
-2022-04-12 11:59:43.3244||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
-2022-04-12 11:59:43.3293||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Adrian\Desktop\dev\c#\StockAPI 
-2022-04-12 12:02:28.8774||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001 
-2022-04-12 12:02:28.9241||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000 
-2022-04-12 12:02:28.9405||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
-2022-04-12 12:02:28.9405||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
-2022-04-12 12:02:28.9582||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Adrian\Desktop\dev\c#\StockAPI 
-2022-04-12 12:03:20.6940||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001 
-2022-04-12 12:03:20.8740||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000 
-2022-04-12 12:03:20.9354||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
-2022-04-12 12:03:20.9578||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
-2022-04-12 12:03:21.0450||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Adrian\Desktop\dev\c#\StockAPI 
-2022-04-12 12:10:10.2042||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001 
-2022-04-12 12:10:10.2638||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000 
-2022-04-12 12:10:10.2710||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
-2022-04-12 12:10:10.2884||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
-2022-04-12 12:10:10.2884||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Adrian\Desktop\dev\c#\StockAPI 
-2022-04-12 12:13:18.1121||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001 
-2022-04-12 12:13:18.1892||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000 
-2022-04-12 12:13:18.2288||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
-2022-04-12 12:13:18.2589||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
-2022-04-12 12:13:18.2707||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Adrian\Desktop\dev\c#\StockAPI 
-2022-04-12 12:14:31.4586||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001 
-2022-04-12 12:14:31.5249||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000 
-2022-04-12 12:14:31.5550||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
-2022-04-12 12:14:31.5654||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
-2022-04-12 12:14:31.5836||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Adrian\Desktop\dev\c#\StockAPI 
-2022-04-12 13:22:44.0142||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001 
-2022-04-12 13:22:44.0965||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000 
-2022-04-12 13:22:44.1257||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
-2022-04-12 13:22:44.1714||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
-2022-04-12 13:22:44.1714||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Adrian\Desktop\dev\c#\StockAPI 
-2022-04-12 17:29:12.4727||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001 
-2022-04-12 17:29:12.5473||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000 
-2022-04-12 17:29:12.5875||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
-2022-04-12 17:29:12.5972||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
-2022-04-12 17:29:12.5972||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Adrian\Desktop\dev\c#\StockAPI 
 2022-04-12 17:31:37.3977||ERROR|StockAPI.Middleware.ErrorHandlingMiddleware|Object reference not set to an instance of an object. System.NullReferenceException: Object reference not set to an instance of an object.
    at StockAPI.Controllers.AccountController.RegisterUser(RegisterUserDto dto) in C:\Users\Adrian\Desktop\dev\c#\StockAPI\Controllers\AccountController.cs:line 23
    at lambda_method15(Closure , Object , Object[] )
@@ -192,18 +121,3 @@ Error Number:547,State:0,Class:16
    at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
 --- End of stack trace from previous location ---
    at StockAPI.Middleware.ErrorHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\Adrian\Desktop\dev\c#\StockAPI\Middleware\ErrorHandlingMiddleware.cs:line 23
-2022-04-12 17:32:21.3280||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001 
-2022-04-12 17:32:21.4091||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000 
-2022-04-12 17:32:21.4091||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
-2022-04-12 17:32:21.4091||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
-2022-04-12 17:32:21.4291||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Adrian\Desktop\dev\c#\StockAPI 
-2022-04-12 17:41:34.6419||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001 
-2022-04-12 17:41:34.9347||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000 
-2022-04-12 17:41:34.9565||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
-2022-04-12 17:41:34.9890||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
-2022-04-12 17:41:35.0181||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Adrian\Desktop\dev\c#\StockAPI 
-2022-04-12 23:21:46.9299||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001 
-2022-04-12 23:21:47.1329||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000 
-2022-04-12 23:21:47.1430||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
-2022-04-12 23:21:47.2586||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
-2022-04-12 23:21:47.2586||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Adrian\Desktop\dev\c#\StockAPI 

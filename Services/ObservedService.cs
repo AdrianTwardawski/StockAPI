@@ -13,6 +13,7 @@ namespace StockAPI.Services
     public interface IObservedService
     {
         int CreateObserved(CreateObservedDto dto);
+        IEnumerable<ObservedDto> GetAll();
         ObservedDto GetById(int id);
         void DeleteById(int id);
         void Update(UpdateObservedDto dto, int id);
@@ -30,7 +31,6 @@ namespace StockAPI.Services
             _logger = logger;
         }
 
-
         public int CreateObserved(CreateObservedDto dto)
         {
             var marketItem = _dbContext.Market.FirstOrDefault(i => i.Name == dto.Name);
@@ -47,6 +47,19 @@ namespace StockAPI.Services
 
             return observed.Id;
         }
+
+        public IEnumerable<ObservedDto> GetAll()
+        {
+
+            var observed = _dbContext.Observed.ToList();
+            if (observed is null)
+                throw new NotFoundException("You are not observing any stock yet");
+
+            var observedDtos = _mapper.Map<List<ObservedDto>>(observed);
+            return observedDtos;
+
+        }
+
 
 
         public ObservedDto GetById(int id)

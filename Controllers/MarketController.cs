@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace StockAPI.Controllers
 {
-    [Route("[controller]")]
+    [Route("api/[controller]")]
     public class MarketController : ControllerBase
     {
 

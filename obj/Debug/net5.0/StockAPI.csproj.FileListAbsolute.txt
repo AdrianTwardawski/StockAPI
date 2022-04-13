@@ -75,3 +75,6 @@ C:\Users\Adrian\Desktop\dev\c#\StockAPI\bin\Debug\net5.0\Swashbuckle.AspNetCore.
 C:\Users\Adrian\Desktop\dev\c#\StockAPI\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\Adrian\Desktop\dev\c#\StockAPI\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 C:\Users\Adrian\Desktop\dev\c#\StockAPI\obj\Debug\net5.0\StockAPI.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Adrian\Desktop\dev\c#\StockAPI\bin\Debug\net5.0\FluentValidation.dll
+C:\Users\Adrian\Desktop\dev\c#\StockAPI\bin\Debug\net5.0\FluentValidation.AspNetCore.dll
+C:\Users\Adrian\Desktop\dev\c#\StockAPI\bin\Debug\net5.0\FluentValidation.DependencyInjectionExtensions.dll
