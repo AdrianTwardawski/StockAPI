@@ -66,6 +66,8 @@ namespace StockAPI
                     builder.RequireClaim("Nationality", "German", "Polish"));
                 options.AddPolicy("Atleast20", builder =>
                     builder.AddRequirements(new MiniumAgeRequirement(20)));
+                options.AddPolicy("Atleast2Stocks", builder =>
+                    builder.AddRequirements(new MinimumStocksCreatedRequirement(2)));
                 
             });
             services.AddAutoMapper(this.GetType().Assembly);
@@ -80,6 +82,7 @@ namespace StockAPI
             services.AddScoped<IPasswordHasher<User>, PasswordHasher<User>>();
             services.AddScoped<IValidator<RegisterUserDto>, RegisterUserDtoValidator>();
             services.AddScoped<IAuthorizationHandler, MinimumAgeRequirementHandler>();
+            services.AddScoped<IAuthorizationHandler, MinimumStocksCreatedRequirementHandler>();
             services.AddScoped<IAuthorizationHandler, ResourceOperationRequirementHandler>();
             services.AddScoped<IUserContextService, UserContextService>();
             services.AddHttpContextAccessor();

@@ -35,7 +35,8 @@ namespace StockAPI.Controllers
         }
 
         [HttpGet]
-        [Authorize(Policy = "Atleast20")]
+        //[Authorize(Policy = "Atleast20")]
+        [Authorize(Policy = "Atleast2Stocks")]
         public ActionResult GetObserved()
         {
             var observed = _service.GetAll();
