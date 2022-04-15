@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using StockAPI.Entities;
@@ -32,8 +33,6 @@ namespace StockAPI.Controllers
      
             return Ok(marketsDtos);
         }
-
-
 
         [HttpGet("{id}")]
         public ActionResult<MarketDto> GetMarket([FromRoute]int id)

@@ -1,11 +1,14 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.Extensions.Logging;
+using StockAPI.Authorization;
 using StockAPI.Entities;
 using StockAPI.Exceptions;
 using StockAPI.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 
 namespace StockAPI.Services
@@ -24,11 +27,20 @@ namespace StockAPI.Services
         private readonly ApplicationDbContext _dbContext;
         private readonly IMapper _mapper;
         private readonly ILogger<ObservedService> _logger;
-        public ObservedService(ApplicationDbContext dbContext, IMapper mapper, ILogger<ObservedService> logger)
+        private readonly IAuthorizationService _authorizationService;
+        private readonly IUserContextService _userContextService;
+        public ObservedService(
+            ApplicationDbContext dbContext,
+            IMapper mapper,
+            ILogger<ObservedService> logger,
+            IAuthorizationService authorizationService,
+            IUserContextService userContextService)
         {
             _dbContext = dbContext;
             _mapper = mapper;
             _logger = logger;
+            _authorizationService = authorizationService;
+            _userContextService = userContextService;
         }
 
         public int CreateObserved(CreateObservedDto dto)
@@ -38,6 +50,8 @@ namespace StockAPI.Services
                 throw new NotFoundException($"Stock {dto.Name} not found");
 
             var observed = _mapper.Map<Observed>(dto);
+
+            observed.CreatedById = _userContextService.GetUserId;
 
             observed.MarketId = marketItem.Id;
             observed.Profit = (observed.PurchasePrice - marketItem.Price) * observed.NumberOfActions;
@@ -80,15 +94,32 @@ namespace StockAPI.Services
             if (observed is null)
                 throw new NotFoundException("Stock not found");
 
+            var authorizationResult = _authorizationService.AuthorizeAsync(_userContextService.User, observed,
+              new ResourceOperationRequirement(ResourceOperation.Delete)).Result;
+
+            if (!authorizationResult.Succeeded)
+            {
+                throw new ForbidException();
+            }
+
             _dbContext.Observed.Remove(observed);
             _dbContext.SaveChanges();         
         }
 
         public void Update(UpdateObservedDto dto, int id)
         {
+
             var observed = _dbContext.Observed.FirstOrDefault(s => s.Id == id);
             if (observed is null)
                 throw new NotFoundException("Stock not found");
+
+            var authorizationResult = _authorizationService.AuthorizeAsync(_userContextService.User, observed,
+                new ResourceOperationRequirement(ResourceOperation.Update)).Result;
+
+            if(!authorizationResult.Succeeded)
+            {
+                throw new ForbidException();
+            }
 
             observed.NumberOfActions = dto.NumberOfActions;
             observed.PurchasePrice = dto.PurchasePrice;

@@ -1,0 +1,5 @@
+2022-04-15 15:16:39.3258||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001 
+2022-04-15 15:16:39.4793||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000 
+2022-04-15 15:16:39.4917||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-04-15 15:16:39.5351||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-04-15 15:16:39.5540||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Adrian\Desktop\dev\c#\StockAPI 

@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using StockAPI.Entities;
 using StockAPI.Models;
@@ -6,12 +7,14 @@ using StockAPI.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 
 namespace StockAPI.Controllers
 {
     [ApiController]
     [Route("api/market/observed")]
+    [Authorize]
     public class ObservedController : ControllerBase
     {
         private readonly IObservedService _service;
@@ -23,13 +26,16 @@ namespace StockAPI.Controllers
 
 
         [HttpPost]
+        [Authorize(Roles = "Admin,Manager")]
         public ActionResult CreateObserved([FromBody] CreateObservedDto dto)
         {
+            var userId = int.Parse(User.FindFirst(c => c.Type == ClaimTypes.NameIdentifier).Value);
             var id = _service.CreateObserved(dto);
             return Created($"/api/observed/{id}", null);
         }
 
         [HttpGet]
+        [Authorize(Policy = "Atleast20")]
         public ActionResult GetObserved()
         {
             var observed = _service.GetAll();
@@ -38,6 +44,7 @@ namespace StockAPI.Controllers
 
 
         [HttpGet("{id}")]
+        [AllowAnonymous]
         public ActionResult GetObserved([FromRoute] int id)
         {
             var observed = _service.GetById(id);
@@ -45,6 +52,7 @@ namespace StockAPI.Controllers
         }
 
         [HttpDelete("{id}")]
+        [Authorize(Policy = "HasNationality")]
         public ActionResult Delete([FromRoute] int id)
         {
             _service.DeleteById(id);

@@ -15,9 +15,10 @@ namespace StockAPI.Entities
         public float PurchasePrice { get; set; }
         public int NumberOfActions { get; set; }
         public float Profit { get; set; }
+        public int? CreatedById { get; set; }
+        public virtual User CreatedBy { get; set; }
         public int MarketId { get; set; }
-        //public string ApplicationUserId { get; set; }
         public virtual Market Market { get; set; }
-        //public virtual ApplicationUser ApplicationUser { get; set; }
+
     }
 }

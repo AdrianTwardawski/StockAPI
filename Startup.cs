@@ -1,5 +1,6 @@
 using FluentValidation;
 using FluentValidation.AspNetCore;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -10,6 +11,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Tokens;
+using StockAPI.Authorization;
 using StockAPI.Controllers;
 using StockAPI.Entities;
 using StockAPI.Middleware;
@@ -57,7 +59,15 @@ namespace StockAPI
                     IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(authenticationSettings.JwtKey)),
                 };
             });
-
+            
+            services.AddAuthorization(options =>
+            {
+                options.AddPolicy("HasNationality", builder =>
+                    builder.RequireClaim("Nationality", "German", "Polish"));
+                options.AddPolicy("Atleast20", builder =>
+                    builder.AddRequirements(new MiniumAgeRequirement(20)));
+                
+            });
             services.AddAutoMapper(this.GetType().Assembly);
             services.AddTransient<IMarketService, MarketService>();
             services.AddTransient<IObservedService, ObservedService>();
@@ -69,7 +79,10 @@ namespace StockAPI
             services.AddScoped<RequestTimeMiddleware>();
             services.AddScoped<IPasswordHasher<User>, PasswordHasher<User>>();
             services.AddScoped<IValidator<RegisterUserDto>, RegisterUserDtoValidator>();
-
+            services.AddScoped<IAuthorizationHandler, MinimumAgeRequirementHandler>();
+            services.AddScoped<IAuthorizationHandler, ResourceOperationRequirementHandler>();
+            services.AddScoped<IUserContextService, UserContextService>();
+            services.AddHttpContextAccessor();
             services.AddSwaggerGen();
             services.AddCors(options =>
             {
@@ -106,6 +119,7 @@ namespace StockAPI
             });
 
             app.UseRouting();
+            app.UseAuthorization();
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();

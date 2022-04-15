@@ -79,3 +79,6 @@ C:\Users\Adrian\Desktop\dev\c#\StockAPI\bin\Debug\net5.0\FluentValidation.dll
 C:\Users\Adrian\Desktop\dev\c#\StockAPI\bin\Debug\net5.0\FluentValidation.AspNetCore.dll
 C:\Users\Adrian\Desktop\dev\c#\StockAPI\bin\Debug\net5.0\FluentValidation.DependencyInjectionExtensions.dll
 C:\Users\Adrian\Desktop\dev\c#\StockAPI\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Adrian\Desktop\dev\c#\StockAPI\bin\Debug\net5.0\Microsoft.AspNetCore.Authorization.dll
+C:\Users\Adrian\Desktop\dev\c#\StockAPI\bin\Debug\net5.0\Microsoft.AspNetCore.Metadata.dll
+C:\Users\Adrian\Desktop\dev\c#\StockAPI\bin\Debug\net5.0\Microsoft.Extensions.Logging.Abstractions.dll

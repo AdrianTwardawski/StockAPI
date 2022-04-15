@@ -1,0 +1,13 @@
+2022-04-14 15:57:47.1799||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001 
+2022-04-14 15:57:47.3219||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000 
+2022-04-14 15:57:47.3606||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-04-14 15:57:47.3606||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-04-14 15:57:47.3606||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Adrian\Desktop\dev\c#\StockAPI 
+2022-04-14 19:44:50.5840||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001 
+2022-04-14 19:44:50.7492||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000 
+2022-04-14 19:44:50.7901||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-04-14 19:44:50.8219||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-04-14 19:44:50.8730||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Adrian\Desktop\dev\c#\StockAPI 
+2022-04-14 19:57:18.2558||INFO|StockAPI.Middleware.RequestTimeMiddleware|Request [POST] at /api/market/observed took 11119 ms 
+2022-04-14 19:59:11.8286||ERROR|StockAPI.Services.ObservedService|Stock with id: 34 DELETE action invoked 
+2022-04-14 19:59:42.2896||ERROR|StockAPI.Services.ObservedService|Stock with id: 34 DELETE action invoked 
