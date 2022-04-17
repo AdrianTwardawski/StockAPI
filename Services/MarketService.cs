@@ -1,86 +1,62 @@
-﻿using HtmlAgilityPack;
+﻿using AutoMapper;
+using HtmlAgilityPack;
 using StockAPI.Entities;
+using StockAPI.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
 namespace StockAPI.Services
-{ 
-        public interface IMarketService
+{
+    public interface IMarketService
+    {
+        PagedResult<MarketDto> GetStocks(MarketQuery query);
+        MarketDto GetMarketById(int id);
+    }
+
+    public class MarketService : IMarketService
+    {
+        private readonly ApplicationDbContext _dbContext;
+        private readonly IStockScraper _stockScrapper;
+        private readonly IMapper _mapper;
+
+        public MarketService(ApplicationDbContext dbContext, IStockScraper stockScraper, IMapper mapper)
         {
-            IEnumerable<Market> AddStocks();
-            IEnumerable<Market> GetStocks();
-            Market GetMarketById(int id);
+            _dbContext = dbContext;
+            _stockScrapper = stockScraper;
+            _mapper = mapper;
         }
 
-        public class MarketService : IMarketService
+
+        public PagedResult<MarketDto> GetStocks(MarketQuery query)
         {
-            private readonly ApplicationDbContext _db;
-            private const string BaseUrl = "https://www.bankier.pl/gielda/notowania/akcje";
+            _stockScrapper.AddStocks();
 
-            public MarketService(ApplicationDbContext db)
-            {
-                _db = db;
-            }
+            var baseQuery = _dbContext.Market.Where(r => query.SearchPhrase == null ||
+                                                (r.Name.ToLower().Contains(query.SearchPhrase.ToLower())));
 
-            public IEnumerable<Market> AddStocks()
-            {
-                var web = new HtmlWeb();
-                var document = web.Load(BaseUrl);
-                var tableRows = document.QuerySelectorAll("table tr").Skip(1).Skip(11);
+            var markets = baseQuery
+               .Skip(query.PageSize * (query.PageNumber - 1))
+               .Take(query.PageSize)
+               .ToList();
 
-                var markets = new List<Market>();
+            var marketsDtos = _mapper.Map<List<MarketDto>>(markets);
 
-                foreach (var tableRow in tableRows)
-                {
-                    var tds = tableRow.QuerySelectorAll("td");
-                    var stock = tds[0].QuerySelector("a").InnerText;
-                    var price = float.Parse(tds[1].InnerText.Replace(",", ".").Replace("&nbsp;", ""));
-                    var change = MathF.Round((price * 100) / (price - (float.Parse(tds[2].InnerText.Replace(",", ".").Replace("&nbsp;", "")))) - 100, 2);
-                    var tradesValue = tds[5].InnerText.Replace("&nbsp;", " ");
-                    var time = tds[9].InnerText;
+            var totalItemsCount = baseQuery.Count();
 
-                    var itemInDb = _db.Market.FirstOrDefault(i => i.Name == stock);
+            var result = new PagedResult<MarketDto>(marketsDtos, totalItemsCount, query.PageSize, query.PageNumber);
 
+            return result;
+        }
 
-                    if (itemInDb == null)
-                    {
-                        var market = new Market
-                        {
-                            Name = stock,
-                            Price = price,
-                            Change = change,
-                            TradesValue = tradesValue,
-                            Time = time
-                        };
-                        markets.Add(market);
-                    }
-                    else
-                    {
-                        itemInDb.Name = stock;
-                        itemInDb.Change = change;
-                        itemInDb.Price = price;
-                        itemInDb.TradesValue = tradesValue;
-                        itemInDb.Time = time;
-                    }
-                }
-                _db.SaveChanges();
-                return markets;
-            }
+        public MarketDto GetMarketById(int id)
+        {
+            _stockScrapper.AddStocks();
+            var stock = _dbContext.Market.FirstOrDefault(m => m.Id == id);
 
-            public IEnumerable<Market> GetStocks()
-            {
-                AddStocks();
-                var stocks = _db.Market.ToList();
-                return stocks;
-            }
-
-           public Market GetMarketById(int id)
-            {
-                AddStocks();
-                var result = _db.Market.FirstOrDefault(m => m.Id == id);
-                return result;
-            }
+            var marketDto = _mapper.Map<MarketDto>(stock);
+            return marketDto;
         }
     }
+}
 

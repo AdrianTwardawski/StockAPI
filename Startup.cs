@@ -74,6 +74,7 @@ namespace StockAPI
             services.AddTransient<IMarketService, MarketService>();
             services.AddTransient<IObservedService, ObservedService>();
             services.AddTransient<IAccountService, AccountService>();
+            services.AddTransient<IStockScraper, StockScraper>();
             services.AddControllers().AddFluentValidation();          
             services.AddDbContext<ApplicationDbContext>();
             services.AddScoped<MarketSeeder>();

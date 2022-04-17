@@ -64,7 +64,6 @@ namespace StockAPI.Services
 
         public IEnumerable<ObservedDto> GetAll()
         {
-
             var observed = _dbContext.Observed.ToList();
             if (observed is null)
                 throw new NotFoundException("You are not observing any stock yet");

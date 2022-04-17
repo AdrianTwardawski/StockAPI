@@ -10,12 +10,12 @@ namespace StockAPI
     public class MarketSeeder
     {
         private readonly ApplicationDbContext _dbContext;
-        private readonly IMarketService _marketServie;
+        private readonly IStockScraper _stockScraper;
 
-        public MarketSeeder(ApplicationDbContext dbContext, IMarketService marketService)
+        public MarketSeeder(ApplicationDbContext dbContext, IStockScraper stockScraper)
         {
             _dbContext = dbContext;
-            _marketServie = marketService;
+            _stockScraper = stockScraper;
         }
         public void Seed()
         {
@@ -60,7 +60,7 @@ namespace StockAPI
 
         private IEnumerable<Market> GetMarkets()
         {
-            var result = _marketServie.AddStocks();
+            var result = _stockScraper.AddStocks();
             return result;
         }
     }

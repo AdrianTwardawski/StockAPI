@@ -17,31 +17,25 @@ namespace StockAPI.Controllers
     {
 
         private readonly IMarketService _marketService;
-        private readonly IMapper _mapper;
-        public MarketController(IMarketService marketService, IMapper mapper)
+        public MarketController(IMarketService marketService)
         {
             _marketService = marketService;
-            _mapper = mapper;
         }
 
         [HttpGet]
-        public ActionResult<IEnumerable<MarketDto>> GetAllMarkets()
+        public ActionResult<IEnumerable<MarketDto>> GetAllMarkets([FromQuery]MarketQuery query)
         {
-            var markets = _marketService.GetStocks();
-
-            var marketsDtos = _mapper.Map<List<MarketDto>>(markets);
-     
+            var marketsDtos = _marketService.GetStocks(query);
+  
             return Ok(marketsDtos);
         }
 
         [HttpGet("{id}")]
         public ActionResult<MarketDto> GetMarket([FromRoute]int id)
         {
-            var market = _marketService.GetMarketById(id);
-
-            var marketDto = _mapper.Map<MarketDto>(market);
-
-            if (market is null)
+            var marketDto = _marketService.GetMarketById(id);
+         
+            if (marketDto is null)
             {
                 return NotFound();
             }

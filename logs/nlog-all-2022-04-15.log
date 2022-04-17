@@ -3,3 +3,20 @@
 2022-04-15 15:16:39.4917||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
 2022-04-15 15:16:39.5351||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
 2022-04-15 15:16:39.5540||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Adrian\Desktop\dev\c#\StockAPI 
+2022-04-15 18:37:20.4941||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001 
+2022-04-15 18:37:20.5685||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000 
+2022-04-15 18:37:20.5685||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-04-15 18:37:20.5997||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-04-15 18:37:20.6263||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Adrian\Desktop\dev\c#\StockAPI 
+2022-04-15 18:38:34.5017||INFO|StockAPI.Middleware.RequestTimeMiddleware|Request [GET] at /api/market took 6857 ms 
+2022-04-15 18:43:46.5553||INFO|StockAPI.Middleware.RequestTimeMiddleware|Request [GET] at /api/market took 50205 ms 
+2022-04-15 18:45:09.1056||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001 
+2022-04-15 18:45:09.2164||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000 
+2022-04-15 18:45:09.2352||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-04-15 18:45:09.2835||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-04-15 18:45:09.3194||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Adrian\Desktop\dev\c#\StockAPI 
+2022-04-15 18:53:54.9370||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001 
+2022-04-15 18:53:55.0307||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000 
+2022-04-15 18:53:55.0473||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-04-15 18:53:55.0626||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-04-15 18:53:55.0626||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Adrian\Desktop\dev\c#\StockAPI 
