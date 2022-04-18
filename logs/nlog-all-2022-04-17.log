@@ -92,3 +92,64 @@ Error Number:10744,State:1,Class:15
 2022-04-17 12:45:30.6319||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
 2022-04-17 12:45:30.6597||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
 2022-04-17 12:45:30.6715||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Adrian\Desktop\dev\c#\StockAPI 
+2022-04-17 19:43:10.9595||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001 
+2022-04-17 19:43:11.1911||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000 
+2022-04-17 19:43:11.2320||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-04-17 19:43:11.2681||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-04-17 19:43:11.2681||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Adrian\Desktop\dev\c#\StockAPI 
+2022-04-17 19:44:42.5941||INFO|StockAPI.Middleware.RequestTimeMiddleware|Request [GET] at /api/market took 73922 ms 
+2022-04-17 19:47:33.4955||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001 
+2022-04-17 19:47:33.5860||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000 
+2022-04-17 19:47:33.6630||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-04-17 19:47:33.7172||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-04-17 19:47:33.7293||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Adrian\Desktop\dev\c#\StockAPI 
+2022-04-17 19:48:15.2929||INFO|StockAPI.Middleware.RequestTimeMiddleware|Request [GET] at /api/market took 32914 ms 
+2022-04-17 19:58:40.3031||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001 
+2022-04-17 19:58:40.3653||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000 
+2022-04-17 19:58:40.4042||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-04-17 19:58:40.4106||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-04-17 19:58:40.4290||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Adrian\Desktop\dev\c#\StockAPI 
+2022-04-17 19:58:48.7817||INFO|StockAPI.Middleware.RequestTimeMiddleware|Request [GET] at /api/market took 6727 ms 
+2022-04-17 20:19:57.3828||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001 
+2022-04-17 20:19:57.4530||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000 
+2022-04-17 20:19:57.4781||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-04-17 20:19:57.4781||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-04-17 20:19:57.5299||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Adrian\Desktop\dev\c#\StockAPI 
+2022-04-17 20:22:34.2150||INFO|StockAPI.Middleware.RequestTimeMiddleware|Request [GET] at /api/market took 78662 ms 
+2022-04-17 20:23:43.4481||INFO|StockAPI.Middleware.RequestTimeMiddleware|Request [GET] at /api/market took 31358 ms 
+2022-04-17 20:35:36.8318||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001 
+2022-04-17 20:35:36.9343||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000 
+2022-04-17 20:35:36.9863||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-04-17 20:35:36.9863||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-04-17 20:35:37.0150||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Adrian\Desktop\dev\c#\StockAPI 
+2022-04-17 20:38:32.4476||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001 
+2022-04-17 20:38:32.5460||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000 
+2022-04-17 20:38:32.5803||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-04-17 20:38:32.5803||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-04-17 20:38:32.6004||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Adrian\Desktop\dev\c#\StockAPI 
+2022-04-17 20:38:57.2926||INFO|StockAPI.Middleware.RequestTimeMiddleware|Request [GET] at /api/market took 16383 ms 
+2022-04-17 20:45:01.7204||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001 
+2022-04-17 20:45:01.7785||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000 
+2022-04-17 20:45:01.8098||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-04-17 20:45:01.8149||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-04-17 20:45:01.8149||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Adrian\Desktop\dev\c#\StockAPI 
+2022-04-17 20:46:52.3181||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001 
+2022-04-17 20:46:52.4307||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000 
+2022-04-17 20:46:52.5434||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-04-17 20:46:52.5960||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-04-17 20:46:52.5960||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Adrian\Desktop\dev\c#\StockAPI 
+2022-04-17 20:49:44.4592||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001 
+2022-04-17 20:49:44.5402||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000 
+2022-04-17 20:49:44.5614||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-04-17 20:49:44.5614||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-04-17 20:49:44.5614||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Adrian\Desktop\dev\c#\StockAPI 
+2022-04-17 21:52:43.9036||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001 
+2022-04-17 21:52:43.9773||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000 
+2022-04-17 21:52:43.9962||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-04-17 21:52:44.0165||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-04-17 21:52:44.0165||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Adrian\Desktop\dev\c#\StockAPI 
+2022-04-17 22:24:52.7178||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001 
+2022-04-17 22:24:52.8295||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000 
+2022-04-17 22:24:52.8295||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-04-17 22:24:52.8478||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-04-17 22:24:52.8693||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Adrian\Desktop\dev\c#\StockAPI 

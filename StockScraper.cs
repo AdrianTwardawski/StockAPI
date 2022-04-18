@@ -19,8 +19,9 @@ namespace StockAPI
 
         public StockScraper(ApplicationDbContext dbContext)
         {
-            _dbContext = dbContext;
+            _dbContext = dbContext;         
         }
+
 
         public IEnumerable<Market> AddStocks()
         {
@@ -40,8 +41,7 @@ namespace StockAPI
                 var time = tds[9].InnerText;
 
                 var itemInDb = _dbContext.Market.FirstOrDefault(i => i.Name == stock);
-
-
+             
                 if (itemInDb == null)
                 {
                     var market = new Market

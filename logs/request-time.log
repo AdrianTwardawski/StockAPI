@@ -4,3 +4,9 @@
 2022-04-15 18:38:34.5017||INFO|StockAPI.Middleware.RequestTimeMiddleware|Request [GET] at /api/market took 6857 ms 
 2022-04-15 18:43:46.5553||INFO|StockAPI.Middleware.RequestTimeMiddleware|Request [GET] at /api/market took 50205 ms 
 2022-04-17 12:44:41.5175||INFO|StockAPI.Middleware.RequestTimeMiddleware|Request [GET] at /api/market took 175191 ms 
+2022-04-17 19:44:42.5941||INFO|StockAPI.Middleware.RequestTimeMiddleware|Request [GET] at /api/market took 73922 ms 
+2022-04-17 19:48:15.2929||INFO|StockAPI.Middleware.RequestTimeMiddleware|Request [GET] at /api/market took 32914 ms 
+2022-04-17 19:58:48.7817||INFO|StockAPI.Middleware.RequestTimeMiddleware|Request [GET] at /api/market took 6727 ms 
+2022-04-17 20:22:34.2150||INFO|StockAPI.Middleware.RequestTimeMiddleware|Request [GET] at /api/market took 78662 ms 
+2022-04-17 20:23:43.4481||INFO|StockAPI.Middleware.RequestTimeMiddleware|Request [GET] at /api/market took 31358 ms 
+2022-04-17 20:38:57.2926||INFO|StockAPI.Middleware.RequestTimeMiddleware|Request [GET] at /api/market took 16383 ms 
