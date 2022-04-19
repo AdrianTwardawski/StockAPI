@@ -104,6 +104,7 @@ namespace StockAPI
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env, MarketSeeder seeder)
         {
+            app.UseResponseCaching();
             app.UseStaticFiles(); //serving static files from wwwroot
             app.UseCors("FrontEndClient");
             seeder.Seed();
