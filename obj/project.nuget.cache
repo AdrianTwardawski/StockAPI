@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "FT3Nr+s7+eJ7kZRQtIO8sdrU4pyJVMOwB5KXKsxjSMgyDUlndHcn/oZsxoVXsZDSqIQS7BbxDu9kzywb2qjb4w==",
+  "dgSpecHash": "dmoi/+Js/itAfpLH13u5CGSVvClFVAfkqS9XidhUmwEYpZ0P3nwHJKf6QzCuig9SzGWJIR0jfFF7rYRL/05n4A==",
   "success": true,
   "projectFilePath": "C:\\Users\\Adrian\\Desktop\\dev\\c#\\StockAPI\\StockAPI.csproj",
   "expectedPackageFiles": [
@@ -14,6 +14,7 @@
     "C:\\Users\\Adrian\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Adrian\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\5.0.16\\microsoft.aspnetcore.authentication.jwtbearer.5.0.16.nupkg.sha512",
     "C:\\Users\\Adrian\\.nuget\\packages\\microsoft.aspnetcore.authorization\\6.0.4\\microsoft.aspnetcore.authorization.6.0.4.nupkg.sha512",
+    "C:\\Users\\Adrian\\.nuget\\packages\\microsoft.aspnetcore.cors\\2.2.0\\microsoft.aspnetcore.cors.2.2.0.nupkg.sha512",
     "C:\\Users\\Adrian\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\5.0.15\\microsoft.aspnetcore.cryptography.internal.5.0.15.nupkg.sha512",
     "C:\\Users\\Adrian\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\5.0.15\\microsoft.aspnetcore.cryptography.keyderivation.5.0.15.nupkg.sha512",
     "C:\\Users\\Adrian\\.nuget\\packages\\microsoft.aspnetcore.hosting.abstractions\\2.2.0\\microsoft.aspnetcore.hosting.abstractions.2.2.0.nupkg.sha512",

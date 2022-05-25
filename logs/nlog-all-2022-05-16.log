@@ -1,0 +1,11 @@
+2022-05-16 10:28:28.2580||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001 
+2022-05-16 10:28:29.0935||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000 
+2022-05-16 10:28:29.8981||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-05-16 10:28:30.4673||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-05-16 10:28:31.0301||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Adrian\Desktop\dev\c#\StockAPI 
+2022-05-16 19:32:46.0470||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001 
+2022-05-16 19:32:46.1763||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000 
+2022-05-16 19:32:46.1894||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-05-16 19:32:46.1894||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-05-16 19:32:46.2021||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Adrian\Desktop\dev\c#\StockAPI 
+2022-05-16 21:01:27.3247||INFO|StockAPI.Middleware.RequestTimeMiddleware|Request [GET] at /api/market took 10934 ms 

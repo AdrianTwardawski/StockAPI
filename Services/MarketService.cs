@@ -13,6 +13,8 @@ namespace StockAPI.Services
     {
         PagedResult<MarketDto> GetStocks(MarketQuery query);
         MarketDto GetMarketById(int id);
+        IEnumerable<Market> GetStocks();
+
     }
 
     public class MarketService : IMarketService
@@ -62,6 +64,14 @@ namespace StockAPI.Services
             var result = new PagedResult<MarketDto>(marketsDtos, totalItemsCount, query.PageSize, query.PageNumber);
 
             return result;
+        }
+
+
+        public IEnumerable<Market> GetStocks()
+        {
+            //AddStocks();
+            var stocks = _dbContext.Market.ToList();
+            return stocks;
         }
 
         public MarketDto GetMarketById(int id)

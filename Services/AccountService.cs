@@ -18,6 +18,8 @@ namespace StockAPI.Services
     {
         void RegisterUser(RegisterUserDto dto);
         string GenerateJwt(LoginDto dto);
+        JwtSecurityToken Verify(string jwt);
+        User GetById(int id);
     }
 
     public class AccountService : IAccountService
@@ -82,8 +84,9 @@ namespace StockAPI.Services
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_authenticationSettings.JwtKey));
             var cred = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
             var expires = DateTime.Now.AddDays(_authenticationSettings.JwtExpireDays);
-
-            var token = new JwtSecurityToken(_authenticationSettings.JwtIssuer,
+           
+            var token = new JwtSecurityToken(
+                user.Id.ToString(),
                 _authenticationSettings.JwtIssuer,
                 claims,
                 expires: expires,
@@ -92,6 +95,26 @@ namespace StockAPI.Services
             var tokenHandler = new JwtSecurityTokenHandler();
 
             return tokenHandler.WriteToken(token);          
+        }
+
+        public JwtSecurityToken Verify(string jwt)
+        {
+            var tokenHandler = new JwtSecurityTokenHandler();
+            var key = Encoding.ASCII.GetBytes(_authenticationSettings.JwtKey);
+            tokenHandler.ValidateToken(jwt, new TokenValidationParameters
+            {
+                IssuerSigningKey = new SymmetricSecurityKey(key),
+                ValidateIssuerSigningKey = true,
+                ValidateIssuer = false,
+                ValidateAudience = false
+            }, out SecurityToken validatedToken);
+
+            return (JwtSecurityToken)validatedToken;
+        }
+
+        public User GetById(int id)
+        {
+            return _dbContext.Users.FirstOrDefault(u => u.Id == id);
         }
     }
 }

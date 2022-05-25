@@ -24,11 +24,21 @@ namespace StockAPI.Controllers
         }
 
         [HttpGet]
-        public ActionResult<IEnumerable<MarketDto>> GetAllMarkets([FromQuery]MarketQuery query)
+        [Route("paginatedmarkets")]
+        public ActionResult<IEnumerable<MarketDto>> GetAllMarkets([FromQuery] MarketQuery query)
         {
             var marketsDtos = _marketService.GetStocks(query);
-  
+
             return Ok(marketsDtos);
+        }
+
+        [HttpGet]
+        [Route("allmarkets")]
+        public ActionResult<IEnumerable<Market>> GetAllMarkets()
+        {
+            var markets = _marketService.GetStocks();
+
+            return Ok(markets);
         }
 
         [HttpGet("{id}")]
@@ -39,7 +49,7 @@ namespace StockAPI.Controllers
             if (marketDto is null)
             {
                 return NotFound();
-            }
+            }    
             return Ok(marketDto);          
         }
     }

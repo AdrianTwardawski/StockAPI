@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace StockAPI.Controllers
 {
-    [ApiController]
+    [ApiController] //odpowiada za walidację modelu w każdym zapytaniu
     [Route("api/market/observed")]
     [Authorize]
     public class ObservedController : ControllerBase
@@ -26,7 +26,7 @@ namespace StockAPI.Controllers
 
 
         [HttpPost]
-        [Authorize(Roles = "Admin,Manager")]
+        [Authorize(Roles = "Admin,Manager")] //nadpisuje Authorize z poziomu Controllera
         public ActionResult CreateObserved([FromBody] CreateObservedDto dto)
         {
             var userId = int.Parse(User.FindFirst(c => c.Type == ClaimTypes.NameIdentifier).Value);

@@ -14,3 +14,12 @@
 2022-04-18 17:05:54.2151||INFO|StockAPI.Middleware.RequestTimeMiddleware|Request [GET] at /api/market/891 took 7401 ms 
 2022-04-18 17:05:54.4123||INFO|StockAPI.Middleware.RequestTimeMiddleware|Request [GET] at /api/market/8 took 8979 ms 
 2022-04-19 12:52:34.9054||INFO|StockAPI.Middleware.RequestTimeMiddleware|Request [GET] at /api/market took 6520 ms 
+2022-05-15 22:37:42.7706||INFO|StockAPI.Middleware.RequestTimeMiddleware|Request [GET] at /api/market/4 took 6419 ms 
+2022-05-16 21:01:27.3247||INFO|StockAPI.Middleware.RequestTimeMiddleware|Request [GET] at /api/market took 10934 ms 
+2022-05-25 14:15:56.9385||INFO|StockAPI.Middleware.RequestTimeMiddleware|Request [GET] at /api/market/allmarkets took 17019 ms 
+2022-05-25 14:15:56.9385||INFO|StockAPI.Middleware.RequestTimeMiddleware|Request [GET] at /api/market/allmarkets took 18566 ms 
+2022-05-25 14:31:39.6284||INFO|StockAPI.Middleware.RequestTimeMiddleware|Request [GET] at /api/market/allmarkets took 10445 ms 
+2022-05-25 19:54:53.4306||INFO|StockAPI.Middleware.RequestTimeMiddleware|Request [POST] at /api/account/login took 39464 ms 
+2022-05-25 19:57:14.3624||INFO|StockAPI.Middleware.RequestTimeMiddleware|Request [POST] at /api/account/login took 65911 ms 
+2022-05-25 19:58:08.4465||INFO|StockAPI.Middleware.RequestTimeMiddleware|Request [POST] at /api/account/login took 13553 ms 
+2022-05-25 23:16:02.7370||INFO|StockAPI.Middleware.RequestTimeMiddleware|Request [GET] at /api/account/user took 23542 ms 

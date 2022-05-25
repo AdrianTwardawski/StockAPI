@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 using StockAPI.Models;
 using StockAPI.Services;
 using System;
@@ -28,7 +29,23 @@ namespace StockAPI.Controllers
         public ActionResult Login([FromBody] LoginDto dto)
         {
             string token = _service.GenerateJwt(dto);
+
+            Response.Cookies.Append("jwt", token, new CookieOptions
+            {
+                HttpOnly = true
+            });
             return Ok(token);
+        }
+
+        [HttpGet("user")]
+        public IActionResult User()
+        {
+            var jwt = Request.Cookies["jwt"];
+            var token = _service.Verify(jwt);
+            var userId = int.Parse(token.Issuer);
+            var user = _service.GetById(userId);
+            return Ok(user);
+          
         }
     }
 }

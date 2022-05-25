@@ -87,7 +87,7 @@ namespace StockAPI.Services
 
         public void DeleteById(int id)
         {
-            _logger.LogError($"Stock with id: {id} DELETE action invoked");
+            _logger.LogWarning($"Stock with id: {id} DELETE action invoked");
 
             var observed = _dbContext.Observed.FirstOrDefault(s => s.Id == id);
             if (observed is null)

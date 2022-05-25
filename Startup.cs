@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -39,7 +40,10 @@ namespace StockAPI
         public void ConfigureServices(IServiceCollection services)
         {
             var authenticationSettings = new AuthenticationSettings();
-
+             /*dzieki Configuration, która jest czêœci¹ klasy Startup, jesteœmy w stanie odnieœæ siê do pliku appsetting.json.
+             Na obiekcie konfiguracji mo¿emy odnieœæ siê do konkretnej sekcji wywo³uj¹æ metodê GetSection,
+             do której przekazujemy nazwê danej sekcji. Odnosz¹c siê do tej sekcji mo¿emy po³¹czyæ wartoœci z tej sekcji
+             do zmiennej authenticationSettings. Teraz wartoœci w pliku appsettings.json s¹ dostêpne na obiekcie authenticationSettings*/
             Configuration.GetSection("Authentication").Bind(authenticationSettings);
 
             services.AddSingleton(authenticationSettings);
@@ -76,7 +80,8 @@ namespace StockAPI
             services.AddTransient<IAccountService, AccountService>();
             services.AddTransient<IStockScraper, StockScraper>();
             services.AddControllers().AddFluentValidation();          
-            services.AddDbContext<ApplicationDbContext>();
+            services.AddDbContext<ApplicationDbContext>(options =>
+                options.UseSqlServer(Configuration.GetConnectionString("StockDbConnection")));
             services.AddScoped<MarketSeeder>();
             services.AddScoped<ErrorHandlingMiddleware>();
             services.AddScoped<RequestTimeMiddleware>();
@@ -95,8 +100,8 @@ namespace StockAPI
 
                     builder.AllowAnyMethod()
                         .AllowAnyHeader()
-                        .WithOrigins("http://localhost:3000")
-
+                        .AllowCredentials()
+                        .WithOrigins(Configuration["AllowedOrigins"])
                 );
             });
         }
@@ -115,8 +120,9 @@ namespace StockAPI
 
             app.UseMiddleware<ErrorHandlingMiddleware>();
             app.UseMiddleware<RequestTimeMiddleware>();
-            app.UseAuthentication();
-            app.UseHttpsRedirection();
+            app.UseAuthentication(); //ka¿dy request wys³any przez klienta bêdzie podlega³ autentykacji
+            app.UseHttpsRedirection(); //jeœli klient API wyœle zapytanie bez protoko³u https
+            //to jego zapytanie, zostanie automatycznie przekierowane na adres z protoko³em https
 
             app.UseSwagger();
 

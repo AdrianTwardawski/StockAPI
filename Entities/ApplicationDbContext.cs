@@ -9,8 +9,13 @@ namespace StockAPI.Entities
 {
     public class ApplicationDbContext : DbContext
     {
-        private string _connectionString =
-            "Server=(localdb)\\mssqllocaldb;Database=StockAPI;Trusted_Connection=True;";
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) //prześłanie opcji do konstruktora bazowego
+        {
+
+        }
+
+        //private string _connectionString =
+        //    "Server=(localdb)\\mssqllocaldb;Database=StockAPI;Trusted_Connection=True;";
         public DbSet<Market> Market { get; set; }
         public DbSet<Observed> Observed { get; set; }
         public DbSet<User> Users { get; set; }
@@ -51,9 +56,9 @@ namespace StockAPI.Entities
                .IsRequired();
         }
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            optionsBuilder.UseSqlServer(_connectionString);
-        }
+        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        //{
+        //    optionsBuilder.UseSqlServer(_connectionString);
+        //}
     }
 }

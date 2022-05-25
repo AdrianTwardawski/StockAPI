@@ -1,0 +1,20 @@
+2022-05-18 12:14:26.3613||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001 
+2022-05-18 12:14:26.4790||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000 
+2022-05-18 12:14:26.4911||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-05-18 12:14:26.5028||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-05-18 12:14:26.5028||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Adrian\Desktop\dev\c#\StockAPI 
+2022-05-18 12:14:43.3937||ERROR|StockAPI.Middleware.ErrorHandlingMiddleware|Conflicting method/path combination "GET api/Market" for actions - StockAPI.Controllers.MarketController.GetAllMarkets (StockAPI),StockAPI.Controllers.MarketController.GetAllMarkets (StockAPI). Actions require a unique method/path combination for Swagger/OpenAPI 3.0. Use ConflictingActionsResolver as a workaround Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Conflicting method/path combination "GET api/Market" for actions - StockAPI.Controllers.MarketController.GetAllMarkets (StockAPI),StockAPI.Controllers.MarketController.GetAllMarkets (StockAPI). Actions require a unique method/path combination for Swagger/OpenAPI 3.0. Use ConflictingActionsResolver as a workaround
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwagger(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at StockAPI.Middleware.RequestTimeMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\Adrian\Desktop\dev\c#\StockAPI\Middleware\RequestTimeMiddleware.cs:line 24
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at StockAPI.Middleware.ErrorHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\Adrian\Desktop\dev\c#\StockAPI\Middleware\ErrorHandlingMiddleware.cs:line 23
+2022-05-18 12:49:28.5734||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001 
+2022-05-18 12:49:28.7303||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000 
+2022-05-18 12:49:28.7363||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-05-18 12:49:28.7363||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-05-18 12:49:28.7363||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Adrian\Desktop\dev\c#\StockAPI 

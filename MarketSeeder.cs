@@ -1,4 +1,5 @@
-﻿using StockAPI.Entities;
+﻿using Microsoft.EntityFrameworkCore;
+using StockAPI.Entities;
 using StockAPI.Services;
 using System;
 using System.Collections.Generic;
@@ -21,6 +22,11 @@ namespace StockAPI
         {
             if(_dbContext.Database.CanConnect())
             {
+                var pendingMigrations = _dbContext.Database.GetPendingMigrations();
+                if(pendingMigrations != null && pendingMigrations.Any())
+                {
+                    _dbContext.Database.Migrate();
+                }
                 if(!_dbContext.Roles.Any())
                 {
                     var roles = GetRoles();
