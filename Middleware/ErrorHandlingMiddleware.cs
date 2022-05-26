@@ -35,7 +35,8 @@ namespace StockAPI.Middleware
             {
                 context.Response.StatusCode = 404;
                 await context.Response.WriteAsync(notFoundException.Message);
-            }       
+            }
+       
             catch (Exception e)
             {
                 _logger.LogError(e, e.Message);

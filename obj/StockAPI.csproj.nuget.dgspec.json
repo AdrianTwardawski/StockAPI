@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Adrian\\Desktop\\dev\\c#\\StockAPI\\StockAPI.csproj": {}
+    "C:\\Users\\Adrian\\Desktop\\dev\\c#\\StockAPP\\StockAPI\\StockAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Adrian\\Desktop\\dev\\c#\\StockAPI\\StockAPI.csproj": {
+    "C:\\Users\\Adrian\\Desktop\\dev\\c#\\StockAPP\\StockAPI\\StockAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Adrian\\Desktop\\dev\\c#\\StockAPI\\StockAPI.csproj",
+        "projectUniqueName": "C:\\Users\\Adrian\\Desktop\\dev\\c#\\StockAPP\\StockAPI\\StockAPI.csproj",
         "projectName": "StockAPI",
-        "projectPath": "C:\\Users\\Adrian\\Desktop\\dev\\c#\\StockAPI\\StockAPI.csproj",
+        "projectPath": "C:\\Users\\Adrian\\Desktop\\dev\\c#\\StockAPP\\StockAPI\\StockAPI.csproj",
         "packagesPath": "C:\\Users\\Adrian\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Adrian\\Desktop\\dev\\c#\\StockAPI\\obj\\",
+        "outputPath": "C:\\Users\\Adrian\\Desktop\\dev\\c#\\StockAPP\\StockAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

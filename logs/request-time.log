@@ -23,3 +23,5 @@
 2022-05-25 19:57:14.3624||INFO|StockAPI.Middleware.RequestTimeMiddleware|Request [POST] at /api/account/login took 65911 ms 
 2022-05-25 19:58:08.4465||INFO|StockAPI.Middleware.RequestTimeMiddleware|Request [POST] at /api/account/login took 13553 ms 
 2022-05-25 23:16:02.7370||INFO|StockAPI.Middleware.RequestTimeMiddleware|Request [GET] at /api/account/user took 23542 ms 
+2022-05-25 23:49:38.4377||INFO|StockAPI.Middleware.RequestTimeMiddleware|Request [GET] at /swagger/index.html took 17415 ms 
+2022-05-26 10:46:24.3643||INFO|StockAPI.Middleware.RequestTimeMiddleware|Request [GET] at /api/market/allmarkets took 8248 ms 

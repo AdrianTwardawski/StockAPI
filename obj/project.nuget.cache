@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "dmoi/+Js/itAfpLH13u5CGSVvClFVAfkqS9XidhUmwEYpZ0P3nwHJKf6QzCuig9SzGWJIR0jfFF7rYRL/05n4A==",
+  "dgSpecHash": "inQDnSoZRBUzcjGfdgNMdNMp7wkBHHswhL8FjEToIUwIUsiMdTRUDysb0f2JUuY74X6nlTKkLvwqsWcN/p8z/w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Adrian\\Desktop\\dev\\c#\\StockAPI\\StockAPI.csproj",
+  "projectFilePath": "C:\\Users\\Adrian\\Desktop\\dev\\c#\\StockAPP\\StockAPI\\StockAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Adrian\\.nuget\\packages\\automapper\\11.0.0\\automapper.11.0.0.nupkg.sha512",
     "C:\\Users\\Adrian\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\11.0.0\\automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",

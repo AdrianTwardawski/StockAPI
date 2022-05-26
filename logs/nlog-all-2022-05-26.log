@@ -1,0 +1,6 @@
+2022-05-26 10:45:36.1727||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001 
+2022-05-26 10:45:36.3793||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000 
+2022-05-26 10:45:36.4720||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-05-26 10:45:36.5874||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-05-26 10:45:36.6031||INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Adrian\Desktop\dev\c#\StockAPI 
+2022-05-26 10:46:24.3643||INFO|StockAPI.Middleware.RequestTimeMiddleware|Request [GET] at /api/market/allmarkets took 8248 ms 

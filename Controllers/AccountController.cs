@@ -19,7 +19,7 @@ namespace StockAPI.Controllers
             _service = service;
         }
         [HttpPost("register")]
-        public ActionResult RegisterUser([FromBody]RegisterUserDto dto)
+        public ActionResult RegisterUser([FromBody] RegisterUserDto dto)
         {
             _service.RegisterUser(dto);
             return Ok();
@@ -38,14 +38,23 @@ namespace StockAPI.Controllers
         }
 
         [HttpGet("user")]
-        public IActionResult User()
+        public ActionResult LoggedUser()
         {
             var jwt = Request.Cookies["jwt"];
             var token = _service.Verify(jwt);
             var userId = int.Parse(token.Issuer);
             var user = _service.GetById(userId);
             return Ok(user);
-          
+        }
+
+        [HttpPost("logout")]
+        public ActionResult Loggout()
+        {
+            Response.Cookies.Delete("jwt");
+            return Ok(new
+            {
+                message = "success"
+            });
         }
     }
 }

@@ -99,6 +99,10 @@ namespace StockAPI.Services
 
         public JwtSecurityToken Verify(string jwt)
         {
+            if (jwt is null)
+            {
+                throw new NotFoundException("User is not loged in");
+            }
             var tokenHandler = new JwtSecurityTokenHandler();
             var key = Encoding.ASCII.GetBytes(_authenticationSettings.JwtKey);
             tokenHandler.ValidateToken(jwt, new TokenValidationParameters
